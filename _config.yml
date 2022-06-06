@@ -24,7 +24,7 @@ user:
   pic: /assets/img/photo.jpg
   picAlt: "catbook"
   job: I am a 2nd-year MRes student at School of Computing, Macquarie University, advised by Dr. Jia Wu and Prof. Jian Yang.
-  aboutme: true # comment this out if you don't need the 'about' page.
+  aboutme: False # comment this out if you don't need the 'about' page.
 
 exclude:
   - README.md
