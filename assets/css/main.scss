@@ -264,7 +264,7 @@ img {
 .archive_title {
     word-wrap: normal;
     @include breakpoint(medium) {
-        max-width: 50rem;
+        max-width: 80rem;
     }
 }
 
