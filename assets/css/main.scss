@@ -263,7 +263,9 @@ img {
 
 .archive_title {
     word-wrap: normal;
-    padding: 5px;
+    @include breakpoint(medium) {
+        max-width: 80%;
+    }
 }
 
 .archive_type {
