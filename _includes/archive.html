@@ -24,8 +24,6 @@
 <!-- main page -->
 {% else %}
 <div class="archive">
-  <ul style="width:800px">
-    <li style="width:660px">
   <div class="archive_title">
   <div>
   <h2><b>BIOGRAPHY</b></h2>
@@ -37,8 +35,6 @@
   <div>
   <h2><b>PUBLICATIONS</b></h2>
   </div>
-   </li>
-  </ul>
 
   {% for post in site.posts %}
   {% unless post.next %}
@@ -52,7 +48,7 @@
   {% endunless %}
 
   <ul style="width:800px">
-    <li style="width:660px">
+    <li style="width:680px">
       <!--<time class='archive_date' datetime='{{ post.date | date_to_xmlschema }}'>
         {{ post.date | date: "%b %d" }}
       </time>-->
