@@ -52,12 +52,12 @@
       <!--<time class='archive_date' datetime='{{ post.date | date_to_xmlschema }}'>
         {{ post.date | date: "%b %d" }}
       </time>-->
-      <div class='archive_title'>
+      <div class='post_comment'>
         <a href='{{ post.url | relative_url }}'>
           {{ post.title | escape }}
         </a>
       </div>
-      <div class='archive_title'>
+      <div class='post_comment'>
 	{{ post.authors | escape }}
       </div>
     </li>
