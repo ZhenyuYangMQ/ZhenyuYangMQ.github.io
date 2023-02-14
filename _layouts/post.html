@@ -16,9 +16,7 @@ layout: page
     {% endif %}
 
     {% if page.link %}
-    <span class="post_categories">
-    <a href='{{ post.link | relative_url }}'></a>
-    </span>
+    <span class="post_date">{{ page.date | date: "%b %-d, %Y" }}</span>
     {% endif %}
 
     {% if page.categories %}
