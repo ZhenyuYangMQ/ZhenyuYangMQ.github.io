@@ -47,7 +47,7 @@
   {% endif %}
   {% endunless %}
 
-<!--   <ul>
+  <ul>
     <li>
       <!--<time class='archive_date' datetime='{{ post.date | date_to_xmlschema }}'>
         {{ post.date | date: "%b %d" }}
@@ -61,18 +61,7 @@
 	{{ post.authors | escape }}
       </div>
     </li>
-  </ul>-->
-  
-  <div class='archive_title'>
-        <a href='{{ post.url | relative_url }}'>
-          {{ post.title | escape }}
-        </a>
-      </div>
-      <div class='archive_title'>
-	{{ post.authors | escape }}
-      </div>
-
-
+  </ul>
   {% endfor %}
 </div>
 {% endif %}
