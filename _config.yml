@@ -21,7 +21,7 @@ cusdis:
 
 user:
   name: Zhenyu Yang
-  pic: /assets/img/photo.jpg
+  pic: /assets/img/cat.jpg
   picAlt: "catbook"
   job: PhD Candidate with the School of Computing at Macquarie University
   aboutme: # comment this out if you don't need the 'about' page.
