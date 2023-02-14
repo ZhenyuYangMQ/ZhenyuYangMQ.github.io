@@ -23,19 +23,19 @@
 
 <!-- main page -->
 {% else %}
-<div class="archive_title">
-<div>
+<div class="archive">
+  <div class="archive_title">
+  <div>
   <h2><b>BIOGRAPHY</b></h2>
   Zhenyu Yang is currently a Ph.D. student with the School of Computing at Macquarie University. His research interest is to develop ML algorithms over graph-structured data for addressing real-world problems, especially fraud detection and anomaly detection. Previously, he received his Master's degree in the School of Computing at Macquarie University.
-</div>
+  </div>
 
 
-<div class="archive_title">
-<div>
+  <div class="archive_title">
+  <div>
   <h2><b>PUBLICATIONS</b></h2>
-</div>
+  </div>
 
-<div class="archive">
   {% for post in site.posts %}
   {% unless post.next %}
   <p class="archive_year">{{ post.date | date: '%Y' }}</p>
