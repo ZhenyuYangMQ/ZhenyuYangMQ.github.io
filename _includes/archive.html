@@ -62,8 +62,10 @@
       </div>
       <div class='archive_title'>
 	{{ post.authors | escape }}
-	{{ post.venues | escape }}
       </div>
+	  <div class='archive_title'>
+	{{ post.venues | escape }}
+	  </div>
     </li>
   </ul>
   {% endfor %}
