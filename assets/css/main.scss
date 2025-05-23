@@ -359,6 +359,14 @@ img {
     font-weight: 700;
 }
 
+.header_loc {
+    display: block;
+    margin-top: .1rem;
+    color: var(--job_loc);
+    font-size: 0.75em;
+    font-weight: 700;
+}
+
 .theme_changer {   
     cursor: pointer;
     input {
