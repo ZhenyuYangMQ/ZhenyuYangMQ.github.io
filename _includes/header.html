@@ -11,7 +11,8 @@
     <span class="header_name">{{ site.user.name }}</span>
     <span class="header_job">{{ site.user.job }}</span>
     <span class="header_mes">{{ site.user.message }}</span>
-    
+      
+
     <div class="contact_links">
       {% if site.user.location %}
       <span class="contact_link"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
@@ -20,8 +21,6 @@
         {{ site.user.location }}
       </span>
       {% endif %}
-
-    <div class="contact_links">
       {% if site.user.email %}
       <a href="{{ site.user.email }}" class="contact_link">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
@@ -40,8 +39,7 @@
       {% endif %}
       {% if site.user.google_scholar %}
       <a href="{{ site.user.google_scholar }}" target="_blank" rel="noopener noreferrer" class="contact_link">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-2-12h4v1.5h-4zM8 9.5h8V11H8zm0 2h8v1.5H8zm0 2h8V16H8z"/>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 576 512"><path d="M381.5 13.7c16.3-4.5 33.7 4.4 38.2 20.7L453.9 112c3.5 12.3-3.1 25.7-15.4 29.2s-25.7-3.1-29.2-15.4L382 68.3 252.3 226.5c-9.1 10.9-12 26.2-7.3 40.5L347.1 501.9c12.3 44.5-9.3 90.7-53.8 103L243 621.5c-44.5 12.3-90.7-9.3-103-53.8L59.8 385c-12.3-44.5 9.3-90.7 53.8-103L327.9 146.4c9.1-10.9 12-26.2 7.3-40.5L144.1 13.7c-16.3-4.5-33.7 4.4-38.2 20.7L62.1 112c-3.5 12.3 3.1 25.7 15.4 29.2s25.7-3.1 29.2-15.4L109.1 68.3 238.8 226.5c9.1 10.9 12 26.2 7.3 40.5L144.1 501.9c-12.3 44.5 9.3 90.7 53.8 103L333 621.5c44.5 12.3 90.7-9.3 103-53.8L516.2 385c12.3-44.5-9.3-90.7-53.8-103L248.1 146.4c-9.1-10.9-12-26.2-7.3-40.5L381.5 13.7z"/>
         </svg>
         Google Scholar
       </a>
