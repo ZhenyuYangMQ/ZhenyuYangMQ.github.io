@@ -216,6 +216,29 @@ img {
     margin-top: 7rem;
 }
 
+.contact_links {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column; /* <-- 添加或修改这一行 */
+    align-items: center; /* 这会使每个项目在横向上居中 */
+
+    .contact_link {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+        color: var(--nav_font); /* Using existing nav font color */
+        font-size: 0.9em;
+
+        &:hover,
+        &:focus {
+            color: var(--nav_font_hover);
+        }
+
+        svg {
+            margin-right: 0.5em;
+        }
+    }
+}
 
 /* 2. Archive
    ========================================================================== */
