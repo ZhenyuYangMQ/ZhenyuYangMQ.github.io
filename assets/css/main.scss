@@ -219,14 +219,14 @@ img {
 .contact_links {
     margin-top: 1rem;
     display: flex;
-    flex-direction: column; /* <-- 添加或修改这一行 */
-    align-items: center; /* 这会使每个项目在横向上居中 */
+    flex-direction: column; 
+    align-items: center; 
 
     .contact_link {
         display: flex;
         align-items: center;
         margin-bottom: 0.5rem;
-        color: var(--nav_font); /* Using existing nav font color */
+        color: var(--nav_font); 
         font-size: 0.9em;
 
         &:hover,
