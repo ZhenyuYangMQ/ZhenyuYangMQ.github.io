@@ -12,7 +12,7 @@
     <span class="header_job">{{ site.user.job }}</span>
     <span class="header_mes">{{ site.user.message }}</span>
       
-
+    {% if page.url == '/' %}
     <div class="contact_links">
       {% if site.user.location %}
       <span class="contact_link"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
@@ -46,6 +46,7 @@
       </a>
       {% endif %}
     </div>
+     {% endif %} 
 
     <nav class="nav">
       {% if site.user.aboutme %}
