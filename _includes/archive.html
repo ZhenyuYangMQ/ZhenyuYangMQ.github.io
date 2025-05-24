@@ -1,41 +1,25 @@
 <!-- each category page -->
 
-{% if page.type == 'Publications' %}
-<div class="archive_title">
-  <div>
-  <h2><b>PUBLICATIONS</b></h2>
-  </div>
+{% if page.type%}
+<div class="archive">
+  <p class="archive_type">{{ page.type }}</p>
+  <ul>
+    {% for post in site.categories[page.type] %}
+    {% if post.url %}
+    <li>
+        <time class='archive_date' datetime='{{ post.date | date_to_xmlschema }}'>
+          {{ post.date | date: "%b %-d, %Y" }}
+        </time>
+        <div class='archive_title'>
+          <a href='{{ post.url | relative_url }}'>
+            {{ post.title | escape }}
+          </a>
+        </div>
+      </li>
+    {% endif %}
+    {% endfor %}
 
-  {% for post in site.posts %}
-  {% unless post.next %}
-  <p class="archive_year">{{ post.date | date: '%Y' }}</p>
-  {% else %}
-  {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-  {% capture nextyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-  {% if year != nextyear %}
-  <p class="archive_year">{{ post.date | date: '%Y' }}</p>
-  {% endif %}
-  {% endunless %}
-
-  <ul>  <!-- style="width:800px"-->
-    <li>  <!-- style="width:660px"-->
-      <!--<time class='archive_date' datetime='{{ post.date | date_to_xmlschema }}'>
-        {{ post.date | date: "%b %d" }}
-      </time>-->
-      <div class='archive_title'>
-        <a href='{{ post.url | relative_url }}'>
-          {{ post.title | escape }}
-        </a>
-      </div>
-      <div class='archive_title'>
-	{{ post.authors | escape }}
-      </div>
-	  <div class='archive_title'>
-	{{ post.venues | escape }}
-	  </div>
-    </li>
   </ul>
-  {% endfor %}
 </div>
 
 <!-- {% if page.type%}
