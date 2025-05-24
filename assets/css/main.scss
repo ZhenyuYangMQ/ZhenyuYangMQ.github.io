@@ -122,13 +122,10 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-text-size-adjust: 100%;
+
     @include breakpoint(medium) {
         zoom: 1;
     }
-
 }
 
 a {
@@ -160,11 +157,9 @@ img {
     }
 
     @include mobile-only {
-        padding-top: 1rem; /* 减小顶部内边距，让内容更紧凑 */
+        padding-top: 16rem;
         min-height: 75%;
-        max-width: 96%; /* 稍微增加内容的最大宽度，使其更好地适应手机屏幕 */
-        margin-left: auto; /* 居中内容 */
-        margin-right: auto; /* 居中内容 */
+        max-width: 92%;
     }
 }
 
@@ -173,9 +168,6 @@ img {
 
     @include breakpoint(medium) {
         margin-left: 22rem;
-    }
-    @include mobile-only {
-        padding: 0.5rem; /* 确保手机端有统一的内边距 */
     }
 }
 
@@ -190,22 +182,10 @@ img {
     }
     }
 
-     @include mobile-only {
+    @include mobile-only {
         margin-top: 2rem;
         margin-left: 1rem;
         margin-right: 1rem;
-        /* 为个人简介部分的图片添加样式 */
-        img {
-            width: 100%; /* 让图片在手机端响应式显示 */
-            float: none; /* 移除浮动，避免布局问题 */
-            margin-bottom: 10px; /* 图片下方增加一些间距 */
-            margin-right: 0;
-        }
-        /* 调整个人简介文本块的宽度 */
-        div[style*="width:535px"] { /* 精确 targeting 包含简介文本的 div */
-            width: auto !important; /* 覆盖固定的宽度，让其自动适应 */
-            padding: 0 5px; /* 如果需要，可以添加一些内边距 */
-        }
     }
 
     
@@ -294,20 +274,6 @@ img {
         margin-top: 2rem;
         margin-left: 1.2rem;
         margin-right: 1.2rem;
-        /* 确保 archive 自身不超出屏幕宽度 */
-        width: auto;
-        max-width: 100%;
-        overflow-x: hidden; /* 隐藏可能出现的水平滚动条 */
-
-        // 针对出版物部分的 ul 和 li 进行手机端样式覆盖
-        .archive_title + div + div ul { /* 这个选择器是针对 PUBLICATIONS 下的 ul */
-             width: auto !important; /* 覆盖固定的宽度 */
-             padding-left: 0; /* 移除默认的 ul 内边距（如果存在） */
-             li {
-                 width: auto !important; /* 覆盖固定的宽度 */
-                 word-wrap: break-word; /* 确保长标题能够换行 */
-                 hyphens: auto; /* 允许单词断字 */
-             }
     }
 }
 
@@ -323,11 +289,6 @@ img {
     word-wrap: normal;
     @include breakpoint(medium) {
         max-width: 80%;
-    }
-    @include mobile-only {
-        max-width: 100%; /* 允许标题占据全部宽度 */
-        word-wrap: break-word; /* 确保长标题能够换行 */
-        hyphens: auto; /* 允许单词断字 */
     }
 }
 
