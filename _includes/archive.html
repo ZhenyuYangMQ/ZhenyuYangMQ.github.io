@@ -35,18 +35,25 @@
     </div>	    
   </div>
 
-  <div class="archive_section"> <div>
+   <div class="archive_section"> <div>
       <h2><b>NEWS</b></h2>
     </div>
 
-    <ul> <li>
-        <div class='archive_title'>
-          <a href="YOUR_KDD25_PUBLICATION_LINK_HERE">
-            2025/05: One paper on Global Interpretable Graph-level Anomaly Detection has been accepted by SIGKDD'25.
-          </a>
-        </div>
-      </li>
-      </ul>
+    <ul>
+    {% for post in site.posts reversed %}  {% if post.venues and post.date and post.title %} {% capture year_last_two_digits %}{{ post.date | date: '%y' }}{% endcapture %}
+        {% capture month %}{{ post.date | date: '%m' }}{% endcapture %}
+        {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+
+        <li>
+          <div class='archive_title'>
+            <a href='{{ post.url | relative_url }}'>
+              {{ year }}/{{ month }}: One paper on {{ post.title | escape }} has been accepted by {{ post.venues | escape }}'{{ year_last_two_digits }}.
+            </a>
+          </div>
+        </li>
+      {% endif %}
+    {% endfor %}
+    </ul>
   </div>
    
   <div class="archive_title">
