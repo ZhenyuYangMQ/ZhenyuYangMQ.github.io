@@ -247,6 +247,12 @@ img {
     }
 }
 
+.contact_links.show-on-mobile-home {
+  @include mobile-only {
+    display: flex;
+  }
+}
+
 /* 2. Archive
    ========================================================================== */
 
