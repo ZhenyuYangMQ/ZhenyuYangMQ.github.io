@@ -35,19 +35,19 @@
     </div>	    
   </div>
 
-   <div class="archive_section"> <div>
+    <div class="archive_section"> <div>
       <h2><b>NEWS</b></h2>
     </div>
 
     <ul>
-    {% for post in site.posts reversed %}  {% if post.venues and post.date and post.title %} {% capture year_last_two_digits %}{{ post.date | date: '%y' }}{% endcapture %}
-        {% capture month %}{{ post.date | date: '%m' }}{% endcapture %}
-        {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+    {% for post in site.posts reversed %}  {% if post.venues and post.date and post.title %} {% assign year = post.date | date: '%Y' %}
+        {% assign month = post.date | date: '%m' %}
+        {% assign clean_venues = post.venues | split: "(" | first | strip %} {# **修改点1: 去除括号内容** #}
 
         <li>
           <div class='archive_title'>
             <a href='{{ post.url | relative_url }}'>
-              {{ year }}/{{ month }}: One paper on {{ post.title | escape }} has been accepted by {{ post.venues | escape }}'{{ year_last_two_digits }}.
+              {{ year }}/{{ month }}: One paper on {{ post.title | escape }} has been accepted by {{ clean_venues | escape }} {{ year }}. {# **修改点3: 结尾统一为venues year** #}
             </a>
           </div>
         </li>
