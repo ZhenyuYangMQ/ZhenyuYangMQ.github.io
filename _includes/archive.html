@@ -1,3 +1,4 @@
+<!-- each category page -->
 {% if page.type %}
 <div class="archive">
   <p class="archive_type">{{ page.type }}</p>
@@ -20,59 +21,53 @@
   </ul>
 </div>
 
+<!-- main page -->
 {% else %}
 <div class="archive">
-  <div class="archive_section_wrapper"> <div>
-      <img alt="image" style="width:170px;float:left;margin-bottom:20px;margin-right:20px;" src="/assets/img/photo.jpg">
-    </div>
-    <div>
-      <h2><b>BIOGRAPHY</b></h2>
-      <div class="biography_content"> Zhenyu Yang is currently a Ph.D. student with the <a href='https://www.mq.edu.au/faculty-of-science-and-engineering/departments-and-schools/school-of-computing'> School of Computing at Macquarie University</a>, supervised by <a href='http://web.science.mq.edu.au/~jiawu/'> A/Prof. Jia Wu</a>. His research interest is to develop ML algorithms over graph-structured data for addressing real-world problems, especially fraud detection and anomaly detection. Previously, he received his Master's degree in the School of Computing at Macquarie University.
+  <div class="archive_title">
+  <div>
+    <img alt="image" style="width:170px;float:left;margin-bottom:20px;margin-right:20px;" src="/assets/img/photo.jpg">
+  </div>
+  <div>
+  <h2><b>BIOGRAPHY</b></h2>
+    <div  style="width:535px">	
+    Zhenyu Yang is currently a Ph.D. student with the <a href='https://www.mq.edu.au/faculty-of-science-and-engineering/departments-and-schools/school-of-computing'> School of Computing at Macquarie University</a>, supervised by <a href='http://web.science.mq.edu.au/~jiawu/'> A/Prof. Jia Wu</a>. His research interest is to develop ML algorithms over graph-structured data for addressing real-world problems, especially fraud detection and anomaly detection. Previously, he received his Master's degree in the School of Computing at Macquarie University.
+    </div>	    
+  </div>   
+  <div class="archive_title">
+  <div>
+  <h2><b>PUBLICATIONS</b></h2>
+  </div>
+
+  {% for post in site.posts %}
+  {% unless post.next %}
+  <p class="archive_year">{{ post.date | date: '%Y' }}</p>
+  {% else %}
+  {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+  {% capture nextyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+  {% if year != nextyear %}
+  <p class="archive_year">{{ post.date | date: '%Y' }}</p>
+  {% endif %}
+  {% endunless %}
+
+  <ul style="width:800px">
+    <li style="width:660px">
+      <!--<time class='archive_date' datetime='{{ post.date | date_to_xmlschema }}'>
+        {{ post.date | date: "%b %d" }}
+      </time>-->
+      <div class='archive_title'>
+        <a href='{{ post.url | relative_url }}'>
+          {{ post.title | escape }}
+        </a>
       </div>
-    </div>   
-  </div>
-
-  <div class="archive_section_wrapper"> <div>
-      <h2><b>NEWS</b></h2>
-    </div>
-
-    <ul> <li> <div class='archive_title'>
-          <a href="YOUR_PUBLICATION_LINK_HERE">
-            2025/01: Our “Global Interpretable Graph-level Anomaly Detection” method has been accepted by SIGKDD'25.
-          </a>
-        </div>
-      </li>
-      </ul>
-  </div>
-  <div class="archive_section_wrapper"> <div>
-      <h2><b>PUBLICATIONS</b></h2>
-    </div>
-
-    {% for post in site.posts %}
-    {% unless post.next %}
-    <p class="archive_year">{{ post.date | date: '%Y' }}</p>
-    {% else %}
-    {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-    {% capture nextyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-    {% if year != nextyear %}
-    <p class="archive_year">{{ post.date | date: '%Y' }</p>
-    {% endif %}
-    {% endunless %}
-
-    <ul> <li> <div class='archive_title'>
-          <a href='{{ post.url | relative_url }}'>
-            {{ post.title | escape }}
-          </a>
-        </div>
-        <div class='archive_title'>
-          {{ post.authors | escape }}
-        </div>
-        <div class='archive_title'>
-          {{ post.venues | escape }}
-        </div>
-      </li>
-    </ul>
-    {% endfor %}
-  </div>
+      <div class='archive_title'>
+	{{ post.authors | escape }}
+      </div>
+	  <div class='archive_title'>
+	{{ post.venues | escape }}
+	  </div>
+    </li>
+  </ul>
+  {% endfor %}
 </div>
 {% endif %}
