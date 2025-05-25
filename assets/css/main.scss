@@ -225,7 +225,7 @@ img {
     @include mobile-only { /* **你需要在这里添加或修改** */
         display: flex;
     	margin-top: -239px;
-    	gap: 1rem;
+    	gap: 0.1rem;
     	align-items: flex-start; /* **如果希望文字从左边对齐而不是居中，可以添加这个。** */
     	margin-right: unset;
 	flex-direction: row;       
