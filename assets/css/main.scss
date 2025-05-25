@@ -250,12 +250,13 @@ img {
 
 .contact_links.show-on-mobile-home {
   @include mobile-only {
-    display: flex;
-    margin-top: 3rem;
-    margin-left: 210px; /* **调整这个百分比值，让联系方式向右移动。例如 '20%' 或 '30%'，直到它避开照片。** */
-    align-items: flex-start; /* **如果希望文字从左边对齐而不是居中，可以添加这个。** */
-    margin-right: unset;
-  }
+    display: flex; /* 启用 Flexbox 布局 */
+        flex-wrap: wrap; /* 如果空间不足，允许项目换行 */
+        justify-content: center; /* 在手机端居中对齐所有项目 */
+        align-items: center; /* 垂直居中对齐 */
+        gap: 10px 20px; /* 行和列之间的间距，例如 10px 行间距，20px 列间距 */
+        margin-top: 1rem; /* 调整与上方 Job 信息的距离，让其更近，例如 1rem */
+        margin-bottom: 1rem;
 }
 
 /* 2. Archive
