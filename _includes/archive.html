@@ -15,26 +15,29 @@
   {% endif %}
   {% endunless %}
 
-  <ul>  
-  <li style="display: flex; align-items: flex-start; margin-bottom: 20px;">
-    {% if post.image %}
-      <img src="{{ post.image }}" alt="paper image" style="height: 4.5em; width: 4.5em; object-fit: cover; margin-right: 15px; border-radius: 4px;">
-    {% endif %}
-    <div>
-      <div class='archive_title'>
-        <a href='{{ post.url | relative_url }}'>
-          {{ post.title | escape }}
-        </a>
-      </div>
-      <div class='archive_title'>
-        {{ post.authors | escape }}
-      </div>
-      <div class='archive_title'>
-        {{ post.venues | escape }}
-      </div>
-    </div>
-  </li>
-</ul>
+  <ul class="publication-list-category">  {# 添加一个类名，用于CSS定位 #}
+      <li class="publication-item-category">  {# 添加一个类名，用于CSS定位 #}
+        {% if post.image %}
+          <div class="publication-image-wrapper"> {# 图片容器，样式在CSS中定义 #}
+            <img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }} thumbnail">
+          </div>
+        {% endif %}
+        
+        <div class="publication-text-content"> {# 文本内容容器，确保与图片并列 #}
+          <div class='archive_title'>
+            <a href='{{ post.url | relative_url }}'>
+              {{ post.title | escape }}
+            </a>
+          </div>
+          <div class='archive_title'>
+            {{ post.authors | escape }}
+          </div>
+          <div class='archive_title'>
+            {{ post.venues | escape }}
+          </div>
+        </div>
+      </li>
+    </ul>
   {% endfor %}
 
   </ul>
