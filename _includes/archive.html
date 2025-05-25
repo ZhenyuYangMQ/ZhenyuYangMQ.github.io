@@ -4,7 +4,8 @@
 <div class="archive">
   <p class="archive_type">{{ page.type }}</p>
   <ul>
-    {% for post in site.posts %}
+  {% for post in site.posts %}
+  {% if post.type == "publication" %}
   {% unless post.next %}
   <p class="archive_year">{{ post.date | date: '%Y' }}</p>
   {% else %}
@@ -38,6 +39,7 @@
         </div>
       </li>
     </ul>
+    {% endif %}
   {% endfor %}
 
   </ul>
