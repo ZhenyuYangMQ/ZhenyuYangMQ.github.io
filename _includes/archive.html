@@ -78,7 +78,7 @@
           </div>
         </li>
 
-      {% elsif post.venues and post.date and post.title %} 
+      {% elsif post.categories contains "Publications" and post.venues and post.date and post.title %} 
         {% assign clean_venues = post.venues | split: "(" | first | strip %}
         <li>
           <div class='archive_title'>
