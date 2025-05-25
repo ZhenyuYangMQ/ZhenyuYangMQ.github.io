@@ -796,9 +796,10 @@ img {
     box-shadow: 2px 2px 8px rgba(0,0,0,0.15); /* 阴影 */
     overflow: hidden; /* 隐藏超出容器的部分 */
     
-    display: flex;
+    display: block;
     align_items: center;
     justify-content: center;
+    border: none;
 
     @media (max-width: 768px) {
         width: 150px; /* 手机上更小的宽度 */
