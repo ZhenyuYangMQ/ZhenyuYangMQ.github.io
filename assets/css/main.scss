@@ -514,7 +514,7 @@ img {
 }
 
 .mobile_menu {
-    display: felx;
+    display: None;
 
     @include mobile-only {
         display: block;
