@@ -5,7 +5,7 @@
   <p class="archive_type">{{ page.type }}</p>
   <ul>
   {% for post in site.posts %}
-  {% if post.categories contains "Publications" %}
+  {% if post.categories contains "Publications" and post.image %}
   {% unless post.next %}
   <p class="archive_year">{{ post.date | date: '%Y' }}</p>
   {% else %}
@@ -18,7 +18,6 @@
 
   <ul class="publication-list-category">  
       <li class="publication-item-category"> 
-        {% if post.image %}
           <div class="publication-image-wrapper"> 
             <img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }} thumbnail">
           </div>
@@ -35,7 +34,6 @@
             {{ post.venues | escape }}
           </div>
         </div>
-	{% endif %}
       </li>
     </ul>
     {% endif %}
