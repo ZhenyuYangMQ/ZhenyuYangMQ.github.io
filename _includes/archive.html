@@ -120,7 +120,7 @@
         {% if post.categories contains "Awards" and post.venues and post.awards %}
           <li>
             <div class='archive_title'>
-              {{ post.awards | escape }} </div>
+              • {{ post.awards | escape }} </div>
             <div class='archive_title'>
               - {{ post.venues | escape }}, {{ post.date | date: '%Y' }} </div>
           </li>
