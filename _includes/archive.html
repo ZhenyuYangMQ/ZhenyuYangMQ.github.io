@@ -71,10 +71,11 @@
           <div class='archive_title'>
             {{ year }}/{{ month }}: Awarded the 
               {% if post.link %} 
-              <a href='{{ post.link | escape }}' target="_blank">{{ post.awards | escape }}</a>.             
+              <a href='{{ post.link | escape }}' target="_blank">{{ post.awards | escape }}</a>             
 	      {% else %}
-              {{ post.awards | escape }}. 
+              {{ post.awards | escape }} 
             {% endif %}
+	   by {{ post.venues | escape }} {{ year }}.
           </div>
         </li>
 
