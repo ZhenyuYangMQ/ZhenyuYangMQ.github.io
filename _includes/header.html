@@ -55,11 +55,13 @@
       </ul>
       {% endif %}
       {% for category in site.categories %}
+      {% unless post.categories contains "Awards" %}
       {% capture cat_name %}{{ category | first }}{% endcapture %}
       <ul class="nav_list">
         <li class="nav_item">
           <a href="{{ site.baseurl }}/categories/{{ cat_name }}" id="aa">{{ cat_name }}
             ({{ category | last | size }})</a>
+       {% endunless %}
         </li>
       </ul>
       {% endfor %}
