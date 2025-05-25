@@ -251,7 +251,7 @@ img {
 .contact_links.show-on-mobile-home {
   @include mobile-only {
     display: flex;
-    margin-top: -20px;
+    margin-top: -200px;
     margin-left: 210px; /* **调整这个百分比值，让联系方式向右移动。例如 '20%' 或 '30%'，直到它避开照片。** */
     align-items: flex-start; /* **如果希望文字从左边对齐而不是居中，可以添加这个。** */
     margin-right: unset;
