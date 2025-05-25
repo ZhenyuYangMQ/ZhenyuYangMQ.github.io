@@ -259,6 +259,13 @@ img {
     margin-left: 0%;           // ← 你可调整这个百分比
     align-items: flex-start;
     margin-right: unset;
+    
+    .contact_link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem; // 图标和文字之间的小间距
+      white-space: nowrap; // 避免换行
+    }
 }
 
 /* 2. Archive
