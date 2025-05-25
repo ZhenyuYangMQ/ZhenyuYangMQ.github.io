@@ -5,7 +5,7 @@
   <p class="archive_type">{{ page.type }}</p>
   <ul>
   {% for post in site.posts %}
-  {% if post.type == "Publications" %}
+  {% if post.categories contains "Publications" %}
   {% unless post.next %}
   <p class="archive_year">{{ post.date | date: '%Y' }}</p>
   {% else %}
