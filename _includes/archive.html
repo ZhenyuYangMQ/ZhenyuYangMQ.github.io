@@ -66,14 +66,14 @@
       {% assign year = post.date | date: '%Y' %}
       {% assign month = post.date | date: '%m' %}
 
-      {% if post.categories contains "Awards" and post.awards and post.date %}  {# awards 类型的 news 优先 #}
+      {% if post.categories contains "Awards" and post.awards and post.date %} 
         <li>
           <div class='archive_title'>
             {{ year }}/{{ month }}: Awarded the {{ post.awards | escape }}.
           </div>
         </li>
 
-      {% elsif post.venues and post.date and post.title %}  {# publication 类型的 news #}
+      {% elsif post.venues and post.date and post.title %} 
         {% assign clean_venues = post.venues | split: "(" | first | strip %}
         <li>
           <div class='archive_title'>
