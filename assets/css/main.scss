@@ -466,7 +466,7 @@ img {
     margin-top: 1rem;
 
     @include mobile-only {
-        display: none;
+        display: flex;
     }
 }
 
