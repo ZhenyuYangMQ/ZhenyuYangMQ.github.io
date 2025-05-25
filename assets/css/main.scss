@@ -226,7 +226,8 @@ img {
         display: flex;
     	margin-top: -239px;
     	gap: 1rem;
-    	align-items: flex-start; /* **如果希望文字从左边对齐而不是居中，可以添加这个。** */
+    	justify-content: center;   
+    	align-items: center;
     	margin-right: unset;
 	flex-direction: row;       
     	flex-wrap: nowrap;
