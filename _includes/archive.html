@@ -78,7 +78,7 @@
           </div>
         </li>
 
-      {% elsif if post.categories contains "Publications" and post.venues and post.date and post.title %} 
+      {% elsif post.categories contains "Publications" and post.venues and post.date and post.title %} 
         {% assign clean_venues = post.venues | split: "(" | first | strip %}
         <li>
           <div class='archive_title'>
@@ -96,7 +96,7 @@
   </div>
 
   {% for post in site.posts %}
-  {% if post.categories contains "Publications"%}
+  {% if post.categories contains "Publications" %}
   {% unless post.next %}
   <p class="archive_year">{{ post.date | date: '%Y' }}</p>
   {% else %}
