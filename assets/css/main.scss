@@ -229,7 +229,8 @@ img {
     	align-items: flex-start; /* **如果希望文字从左边对齐而不是居中，可以添加这个。** */
     	margin-right: unset;
 	flex-direction: row;       
-    	flex-wrap: nowrap; 
+    	flex-wrap: nowrap;
+	overflow-x: auto; 
     }
 
     .contact_link {
