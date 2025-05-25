@@ -792,7 +792,7 @@ img {
     
     margin-right: 15px; /* 图片与右侧文本之间的间距，您可以调整 */
     border-radius: 4px; /* 圆角边框 */
-    border: 1px solid #ddd; /* 可选的边框 */
+    border: none;
     box-shadow: 2px 2px 8px rgba(0,0,0,0.15); /* 阴影 */
     overflow: hidden; /* 隐藏超出容器的部分 */
     
