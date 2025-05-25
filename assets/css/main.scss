@@ -223,11 +223,11 @@ img {
     align-items: center; 
 
     @include mobile-only { /* **你需要在这里添加或修改** */
-        display: None;
-	margin-top: 3rem;
-        margin-left: 210px; /* **调整这个百分比值，让联系方式向右移动。例如 '20%' 或 '30%'，直到它避开照片。** */
-        align-items: flex-start; /* **如果希望文字从左边对齐而不是居中，可以添加这个。** */
-        margin-right: unset;
+        display: flex;
+    margin-top: -239px;
+    margin-left: 218px; /* **调整这个百分比值，让联系方式向右移动。例如 '20%' 或 '30%'，直到它避开照片。** */
+    align-items: flex-start; /* **如果希望文字从左边对齐而不是居中，可以添加这个。** */
+    margin-right: unset;
     }
 
     .contact_link {
