@@ -134,7 +134,12 @@
         {% if post.categories contains "Awards" and post.venues and post.awards %}
           <li>
             <div class='archive_title'>
-              • {{ post.awards | escape }} </div>
+              {% if post.link %} 
+              <a href='{{ post.link | escape }}' target="_blank">{{ post.awards | escape }}</a>.             
+              {% else %}
+              {{ post.awards | escape }}. 
+            {% endif %}
+	    </div>
             <div class='archive_title'>
               &nbsp;&nbsp;&ndash; {{ post.venues | escape }}, {{ post.date | date: '%Y' }} </div>
           </li>
