@@ -15,15 +15,15 @@
   {% endif %}
   {% endunless %}
 
-  <ul class="publication-list-category">  {# 添加一个类名，用于CSS定位 #}
-      <li class="publication-item-category">  {# 添加一个类名，用于CSS定位 #}
+  <ul class="publication-list-category">  
+      <li class="publication-item-category"> 
         {% if post.image %}
-          <div class="publication-image-wrapper"> {# 图片容器，样式在CSS中定义 #}
+          <div class="publication-image-wrapper"> 
             <img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }} thumbnail">
           </div>
         {% endif %}
         
-        <div class="publication-text-content"> {# 文本内容容器，确保与图片并列 #}
+        <div class="publication-text-content"> 
           <div class='archive_title'>
             <a href='{{ post.url | relative_url }}'>
               {{ post.title | escape }}
