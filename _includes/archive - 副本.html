@@ -16,20 +16,25 @@
   {% endunless %}
 
   <ul>  
-    <li> 
+  <li style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+    {% if post.image %}
+      <img src="{{ post.image }}" alt="paper image" style="height: 4.5em; width: 4.5em; object-fit: cover; margin-right: 15px; border-radius: 4px;">
+    {% endif %}
+    <div>
       <div class='archive_title'>
         <a href='{{ post.url | relative_url }}'>
           {{ post.title | escape }}
         </a>
       </div>
       <div class='archive_title'>
-	{{ post.authors | escape }}
+        {{ post.authors | escape }}
       </div>
-	  <div class='archive_title'>
-	{{ post.venues | escape }}
-	  </div>
-    </li>
-  </ul>
+      <div class='archive_title'>
+        {{ post.venues | escape }}
+      </div>
+    </div>
+  </li>
+</ul>
   {% endfor %}
 
   </ul>
