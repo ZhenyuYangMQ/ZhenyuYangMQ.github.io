@@ -69,7 +69,8 @@
       {% if post.categories contains "Awards" and post.awards and post.date %} 
         <li>
           <div class='archive_title'>
-            {{ year }}/{{ month }}: {% if post.link %} 
+            {{ year }}/{{ month }}: Awarded the 
+              {% if post.link %} 
               <a href='{{ post.link | escape }}' target="_blank">{{ post.awards | escape }}</a>.             
 	      {% else %}
               {{ post.awards | escape }}. 
@@ -133,14 +134,14 @@
       {% for post in site.posts %}
         {% if post.categories contains "Awards" and post.venues and post.awards %}
           <li>
-            <div class='archive_title'>
+            <div class='archive_title'> •
               {% if post.link %} 
               <a href='{{ post.link | escape }}' target="_blank">{{ post.awards | escape }}</a>.             
               {% else %}
               {{ post.awards | escape }}. 
             {% endif %}
 	    </div>
-            <div class='archive_title'>
+            <div class='archive_title'> 
               &nbsp;&nbsp;&ndash; {{ post.venues | escape }}, {{ post.date | date: '%Y' }} </div>
           </li>
         {% endif %}
