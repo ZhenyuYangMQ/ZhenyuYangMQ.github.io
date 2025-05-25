@@ -22,8 +22,6 @@
           <div class="publication-image-wrapper"> 
             <img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }} thumbnail">
           </div>
-        {% endif %}
-        
         <div class="publication-text-content"> 
           <div class='archive_title'>
             <a href='{{ post.url | relative_url }}'>
@@ -37,6 +35,7 @@
             {{ post.venues | escape }}
           </div>
         </div>
+	{% endif %}
       </li>
     </ul>
     {% endif %}
