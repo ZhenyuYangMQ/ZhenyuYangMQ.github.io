@@ -119,11 +119,11 @@
       {% for post in site.posts %}
         {% if post.categories contains "Awards" and post.venues and post.awards %}
           <li>
-            <div class='archive_title'>
-              {{ post.venues | escape }}
+	    <div class='archive_title'>
+              {{ post.awards | escape }}
             </div>
             <div class='archive_title'>
-              {{ post.awards | escape }}
+              {{ post.venues | escape }}
             </div>
           </li>
         {% endif %}
