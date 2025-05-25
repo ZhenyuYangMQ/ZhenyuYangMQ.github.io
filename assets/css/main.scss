@@ -475,6 +475,7 @@ img {
     @include mobile-only {
         display: flex;
         margin-top: 13.9rem;
+	gap: 1rem;
         margin-left: 0; 
         margin-right: 0;
         width: 100%;
