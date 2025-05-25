@@ -55,7 +55,7 @@
       </ul>
       {% endif %}
       {% for category in site.categories %}
-      {% unless post.categories contains "Awards" %}
+      {% unless category contains "Awards" %}
       {% capture cat_name %}{{ category | first }}{% endcapture %}
       <ul class="nav_list">
         <li class="nav_item">
