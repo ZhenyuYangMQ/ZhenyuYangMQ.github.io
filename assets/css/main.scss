@@ -231,9 +231,9 @@ img {
 	flex-direction: row;       
     	flex-wrap: nowrap;
 
-	.contact_location {
-      	display: none;
-    	}
+	.contact_link:first-child {
+            display: none;
+        }
     }
 
     .contact_link {
