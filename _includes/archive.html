@@ -110,5 +110,26 @@
     </li>
   </ul>
   {% endfor %}
+
+</div><div class="archive_section"> <div>
+      <h2><b>AWARDS</b></h2>
+    </div>
+
+    <ul>
+      {% for post in site.posts %}
+        {% if post.categories contains "Awards" and post.venues and post.awards %}
+          <li>
+            <div class='archive_title'>
+              {{ post.venues | escape }}
+            </div>
+            <div class='archive_title'>
+              {{ post.awards | escape }}
+            </div>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+
 </div>
 {% endif %}
