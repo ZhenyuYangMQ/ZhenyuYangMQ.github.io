@@ -769,44 +769,44 @@ img {
 
 .publication-image-wrapper {
     flex-shrink: 0; /* 防止图片容器缩小 */
-    /* 图片容器尺寸保持您觉得合适的 180px x 101.25px */
-    width: 180px !important; /* <--- 保持此宽度 */
-    height: 101.25px !important; /* <--- 保持此高度 (180 * 9 / 16 = 101.25) */
+    /* 再次缩小图片容器的尺寸，并保持长方形比例。
+       您可以根据右侧标题、作者、会议三行文本的实际总高度来微调 width 和 height。
+       当前设定为 16:9 比例，尝试让高度与三行文本大致匹配。 */
+    width: 180px; /* <--- 调整此宽度，使其更小 */
+    height: 101.25px; /* <--- 相应比例的高度 (200 * 9 / 16 = 112.5) */
+    /* 您可以尝试例如 180px 宽，101.25px 高，或者 160px 宽，90px 高等组合 */
     
-    margin-right: 25px !important; /* 图片与右侧文本之间的间距 */
+    margin-right: 25px; /* 图片与右侧文本之间的间距，您可以调整 */
     border-radius: 4px; /* 圆角边框 */
     border: 1px solid #ddd; /* 可选的边框 */
     box-shadow: 2px 2px 8px rgba(0,0,0,0.15); /* 阴影 */
-    
-    /* 当使用 object-fit: contain 时，如果图片比例与容器不符，背景色会填充空白区域 */
-    background-color: #f0f0f0; /* 可选的背景色，用于填充 contain 模式下的空白区域 */
-    overflow: hidden; /* 隐藏超出容器的部分（虽然 contain 模式下通常不会超出） */
+    overflow: hidden; /* 隐藏超出容器的部分 */
 
     @media (max-width: 768px) {
-        width: 150px !important; /* 手机上宽度 */
-        height: 84.375px !important; /* 手机上相应比例的高度 */
-        margin-right: 0 !important;
-        margin-bottom: 20px !important; /* 手机上图片和文本之间的垂直间距 */
+        width: 150px; /* 手机上更小的宽度 */
+        height: 84.375px; /* 手机上相应比例的高度 (150 * 9 / 16) */
+        margin-right: 0;
+        margin-bottom: 20px; /* 手机上图片和文本之间的垂直间距 */
     }
 
     img {
-        width: 100% !important; /* 确保图片撑满容器宽度 */
-        height: 100% !important; /* 确保图片撑满容器高度 */
-        object-fit: contain !important; /* <--- 关键改动：图片缩放以适应容器，不裁剪，保持原始比例 */
-        display: block !important; /* 移除图片底部可能存在的额外空白 */
+        width: 100%; /* 确保图片撑满容器宽度 */
+        height: 100%; /* 确保图片撑满容器高度 */
+        object-fit: cover; /* 图片会填充整个容器，多余部分会被裁剪 */
+        display: block; /* 移除图片底部可能存在的额外空白 */
     }
 }
 
 .publication-text-content {
     flex-grow: 1; /* 占据剩余的所有可用空间 */
-    margin: 0 !important; /* 强制移除 */
-    padding: 0 !important; /* 强制移除 */
-    line-height: 1.4 !important; /* 强制 */
+    margin: 0; 
+    padding: 0;
+    line-height: 1.4; 
 
     .archive_title {
         margin: 0 !important; 
         padding: 0 !important; 
-        line-height: inherit !important; 
+        line-height: inherit; 
         
         &:not(:last-child) {
             margin-bottom: 0.6rem !important; 
@@ -814,15 +814,15 @@ img {
     }
 
     @media (max-width: 768px) {
-        text-align: center !important; 
+        text-align: center; /* 手机上文本居中 */
     }
 }
 
 /* 确保 .archive_year 的样式是您想要的 */
 .archive_year {
-    font-size: 1.2rem !important;
-    margin-top: 1.4rem !important;
-    margin-bottom: 0.6rem !important;
+    font-size: 1.2rem;
+    margin-top: 1.4rem;
+    margin-bottom: 0.6rem;
 }
 
 /* 6. Footer
