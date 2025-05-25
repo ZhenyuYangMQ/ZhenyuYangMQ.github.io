@@ -769,21 +769,23 @@ img {
 
 .publication-image-wrapper {
     flex-shrink: 0; /* 防止图片容器缩小 */
-    /* 调整图片容器的尺寸以使其更大，并保持长方形比例 */
-    width: 200px; /* <--- 增加宽度，您可以根据需要调整 */
-    height: 112.5px; /* <--- 增加高度，保持与 200px 宽度相同的 16:9 比例 (200 * 9 / 16 = 112.5) */
+    /* 再次增大图片容器的尺寸，并保持长方形比例。
+       您可以根据右侧标题、作者、会议三行文本的实际总高度来微调 width 和 height。
+       当前设定为 16:9 比例，尝试让高度与三行文本大致匹配。 */
+    width: 360px; /* <--- 再次增大宽度，您可以根据需要调整 */
+    height: 202.5px; /* <--- 相应比例的高度 (360 * 9 / 16 = 202.5) */
     
-    margin-right: 25px; /* 增加图片与右侧文本之间的间距，使其更协调 */
+    margin-right: 40px; /* 进一步增加图片与右侧文本之间的间距 */
     border-radius: 4px; /* 圆角边框 */
     border: 1px solid #ddd; /* 可选的边框 */
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* 可选的阴影 */
-    overflow: hidden; /* 隐藏超出容器的部分，以确保图片裁剪在边界内 */
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2); /* 略微增强阴影，使图片更突出 */
+    overflow: hidden; /* 隐藏超出容器的部分 */
 
     @media (max-width: 768px) {
-        width: 150px; /* 手机上更小的宽度 */
-        height: 84.375px; /* 手机上相应比例的高度 (150 * 9 / 16) */
+        width: 250px; /* 手机上更小的宽度 */
+        height: 140.625px; /* 手机上相应比例的高度 (250 * 9 / 16) */
         margin-right: 0;
-        margin-bottom: 15px; /* 手机上图片和文本之间的垂直间距 */
+        margin-bottom: 20px; /* 手机上图片和文本之间的垂直间距 */
     }
 
     img {
@@ -796,15 +798,22 @@ img {
 
 .publication-text-content {
     flex-grow: 1; /* 占据剩余的所有可用空间 */
-    /* 移除可能导致不对齐的默认上边距或内边距 */
-    margin-top: 0; 
-    padding-top: 0;
+    /* 强制移除所有可能导致偏移的默认间距 */
+    margin: 0; 
+    padding: 0;
+    line-height: 1.4; /* 调整行高，让文本看起来更协调 */
 
-    /* 检查并调整 .archive_title 的样式，确保它们不会将内容推离顶部 */
+    /* 确保 .archive_title 的样式不会将内容推离顶部 */
     .archive_title {
-        margin-top: 0; /* 确保标题没有默认的上边距 */
-        margin-bottom: 0.5rem; /* 根据需要调整行间距 */
-        /* 保持其他样式，如 font-size, color 等 */
+        /* 使用 !important 强制覆盖任何其他可能设置的 margin/padding */
+        margin: 0 !important; 
+        padding: 0 !important; 
+        line-height: inherit; /* 继承父元素的行高 */
+        
+        /* 除了最后一个 archive_title，给其他标题加点底部间距 */
+        &:not(:last-child) {
+            margin-bottom: 0.6rem !important; /* 调整底部间距，让行与行之间有清晰分隔 */
+        }
     }
 
     @media (max-width: 768px) {
@@ -818,7 +827,6 @@ img {
     margin-top: 1.4rem;
     margin-bottom: 0.6rem;
 }
-
 
 /* 6. Footer
    ========================================================================== */
