@@ -30,8 +30,41 @@
           <div class='archive_title'>
             {{ post.authors | escape }}
           </div>
-          <div class='archive_title'>
-            {{ post.venues | escape }}
+           <div class='archive_title'>
+            {% comment %} 开始处理会议名称格式 {% endcomment %}
+            {% assign venue_full_string = post.venues %}
+            {% assign publication_year = post.date | date: '%Y' %}
+
+            {% assign open_paren_index = venue_full_string | indexOf: '(' %}
+
+            {% if open_paren_index != nil and open_paren_index >= 0 %}
+              {% comment %} 如果包含括号，提取简写和等级 {% endcomment %}
+              {% assign venue_acronym_raw = venue_full_string | slice: 0, open_paren_index %}
+              {% assign venue_acronym = venue_acronym_raw | strip %}
+
+              {% assign close_paren_index = venue_full_string | indexOf: ')' %}
+              {% if close_paren_index != nil and close_paren_index > open_paren_index %}
+                {% assign venue_rank = venue_full_string | slice: open_paren_index, close_paren_index | replace: '(', '' | replace: ')', '' | strip %}
+              {% else %}
+                {% assign venue_rank = '' %} {% comment %} 如果没有找到闭括号，等级为空 {% endcomment %}
+              {% endif %}
+            {% else %}
+              {% comment %} 如果不包含括号，整个字符串就是简写，等级为空 {% endcomment %}
+              {% assign venue_acronym = venue_full_string | strip %}
+              {% assign venue_rank = '' %}
+            {% endif %}
+
+            {% comment %} 从 _data/venues.yml 中查找全称 {% endcomment %}
+            {% assign full_venue_name = site.data.venues[venue_acronym] %}
+
+            {{ venue_acronym }} {{ publication_year }}
+            {% if venue_rank != '' %}
+              ({{ venue_rank }})
+            {% endif %}
+            {% if full_venue_name %}
+              : {{ full_venue_name }}
+            {% endif %}
+            {% comment %} 结束处理会议名称格式 {% endcomment %}
           </div>
         </div>
       </li>
