@@ -1,5 +1,5 @@
 # _data/venues.yml
-KDD: "ACM SIGKDD Conference on Knowledge Discovery and Data Mining"
+SIGKDD: "ACM SIGKDD Conference on Knowledge Discovery and Data Mining"
 ACL: "Annual Meeting of the Association for Computational Linguistics"
 ECML-PKDD: "European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases"
 WWW: "The Web Conference"
