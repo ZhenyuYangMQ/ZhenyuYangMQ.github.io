@@ -148,13 +148,13 @@ img {
     border-radius: 15px;
     box-shadow: 0 0 2px 2px var(--shadow_color);
     padding-bottom: 2rem;
-    padding-right: 20px !important;
+    padding-right: 30px !important;
     padding-left: 0px !important;
 
     @include breakpoint(medium) {
         margin-left: auto;
         margin-right: auto;
-  	max-width: 1288px;   /* 调整整个中间页面大小 */
+  	max-width: 1333px;   /* 调整整个中间页面大小 */
         padding-top: 2.5rem;
     }
 
