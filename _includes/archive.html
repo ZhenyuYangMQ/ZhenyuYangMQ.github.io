@@ -91,7 +91,7 @@
         {% assign clean_venues = post.venues | split: "(" | first | strip %}
         <li>
           <div class='archive_title'>
-            {{ year }}/{{ month }}: Our paper on <a href='{{ post.url | relative_url }}'>{{ post.title | escape }}</a> has been accepted by {{ clean_venues | escape }} {{ year }}.
+            {{ year }}/{{ month }}: Our paper on <a href='{{ post.link | relative_url }}'>{{ post.title | escape }}</a> has been accepted by {{ clean_venues | escape }} {{ year }}.
           </div>
         </li>
       {% endif %}
