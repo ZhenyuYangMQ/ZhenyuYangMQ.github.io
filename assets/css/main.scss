@@ -810,6 +810,8 @@ img {
         width: 272px; /* 手机上更小的宽度 */
         height: 102px; /* 手机上相应比例的高度 (150 * 9 / 16) */
         margin-bottom: 20px; /* 手机上图片和文本之间的垂直间距 */
+	margin-left: 20px;
+	margin-right: 20px;
     }
 
     .publication-image-wrapper img {
