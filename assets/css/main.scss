@@ -826,7 +826,7 @@ img {
 .publication-text-content {
     flex-grow: 1; /* 占据剩余的所有可用空间 */
     margin: 0; 
-    padding: 0;
+    padding: 0 0 0 0;
     line-height: 1.4; 
 
     .archive_title {
