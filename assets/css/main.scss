@@ -849,6 +849,11 @@ img {
     }
 }
 
+.publication-item-link:hover .archive_title {
+  color: #007bff; /* 悬浮时改为 Bootstrap 蓝 */
+  text-decoration: underline;
+}
+
 /* 确保 .archive_year 的样式是您想要的 */
 .archive_year {
     font-size: 1.2rem;
