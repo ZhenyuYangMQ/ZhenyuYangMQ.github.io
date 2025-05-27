@@ -779,7 +779,7 @@ img {
     margin-bottom: 2rem
 
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* 更明显的阴影，更现代 */
-    border: 1px solid #e0e0e0; /* 添加浅色边框，提升可视层次 */
+    /* border: 1px solid #e0e0e0;  添加浅色边框，提升可视层次 */
 
     @media (max-width: 768px) {
         flex-direction: column;
