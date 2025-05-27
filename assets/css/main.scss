@@ -769,21 +769,21 @@ img {
 }
 
 .publication-item-category {
-    display: flex; /* 启用 Flexbox 布局，使图片和文本并列 */
-    align-items: flex-start; /* 顶部对齐：使图片和文本的顶部对齐 */
-    /* margin-bottom: 2.5rem;  每条出版物之间的垂直间距 */
-    /* padding-bottom: 1.5rem;  底部内边距 */
-    /* border-bottom: 1px dashed var(--job_font); 可以添加虚线分隔线 */
+    display: flex;
+    align-items: flex-start;
     
-    background-color: #fff !important; /* 给卡片一个背景色 */
-    border-radius: 8px !important; /* 轻微圆角，使卡片更柔和 */
-    padding: 1.5rem 2rem
+    background-color: #fff !important;
+    border-radius: 12px !important; /* 更柔和的圆角 */
+    padding: 2rem 2.5rem 2rem 2.5rem; /* 增加 padding，让内容不贴边 */
+    margin: 1rem; /* 与周围元素拉开距离 */
 
-    box-shadow: 0 6px 12px rgba(0,0,0,0.08); /* 轻微的阴影效果 */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* 更明显的阴影，更现代 */
+    border: 1px solid #e0e0e0; /* 添加浅色边框，提升可视层次 */
 
-    @media (max-width: 768px) { /* 针对小屏幕设备的响应式调整 */
-        flex-direction: column; /* 在手机上图片和文本垂直堆叠 */
-        align-items: center; /* 在手机上居中对齐 */
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem;
     }
 }
 
