@@ -17,16 +17,15 @@
   {% endunless %}
 
   <ul class="publication-list-category">  
-      <li class="publication-item-category">
-		  <a href='{{ post.link | relative_url }}'>
+      <li class="publication-item-category"> 
           <div class="publication-image-wrapper"> 
             <img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }} thumbnail">
           </div>
         <div class="publication-text-content"> 
           <div class='archive_title'>
-		  
+            <a href='{{ post.link | relative_url }}'>
               {{ post.title | escape }}
-            
+            </a>
           </div>
           <div class='archive_title'>
             {{ post.authors | escape }}
@@ -45,7 +44,6 @@
   {% endif %}
 </div>
         </div>
-		</a>
       </li>
     </ul>
     {% endif %}
