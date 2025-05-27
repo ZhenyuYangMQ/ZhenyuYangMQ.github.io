@@ -39,7 +39,7 @@
   {% assign venue_info = site.data.venues[venue_key] %}
 
   {% if venue_info %}
-    {{ venue_key }} {{ year }}: {{ venue_info }} ({{ venue_rank }})
+    {{ venue_key }} {{ year }}{{ year }}: {{ venue_info }} ({{ venue_rank }})
   {% else %}
     {{ venue_full }} {{ year }}
   {% endif %}
