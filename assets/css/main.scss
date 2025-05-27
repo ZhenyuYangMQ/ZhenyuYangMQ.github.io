@@ -783,10 +783,6 @@ img {
     @media (max-width: 768px) {
         flex-direction: column;
         align-items: center;
-
-        padding: 1rem 1rem !important;
-        width: calc(100% - 2rem) !important;
-        margin: 1rem auto !important;
     }
 }
 
@@ -811,17 +807,9 @@ img {
     
 
     @media (max-width: 768px) {
-        width: 100% !important; /* <--- 让图片容器在手机端占据可用宽度 */
-        max-width: 200px !important; /* <--- 限制图片最大尺寸，防止过大 */
-
-        margin-right: 0 !important; /* <--- 在手机端（垂直布局）移除右侧间距 */
-        margin-bottom: 1rem !important; /* <--- 添加底部间距，与下方文本内容分开 */
-
-        img {
-            width: 100% !important; /* 确保图片本身填充容器 */
-            height: auto !important;
-            display: block !important; /* 移除图片下方可能存在的额外空间 */
-        }
+        width: 272px; /* 手机上更小的宽度 */
+        height: 102px; /* 手机上相应比例的高度 (150 * 9 / 16) */
+        margin-bottom: 20px; /* 手机上图片和文本之间的垂直间距 */
     }
 
     .publication-image-wrapper img {
