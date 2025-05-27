@@ -767,22 +767,6 @@ img {
 /* Styles for Publications Category Page (e.g., /categories/Publications) */
 
 .publication-list-category {
-    > a { /* 选择 .publication-list-category 的直接子元素 <a> */
-        color: inherit !important;       /* <--- 关键：继承父元素的文本颜色（通常是黑色） */
-                                         /* 如果想强制所有文字都为黑色，可以直接写 `color: #000 !important;` */
-        text-decoration: none !important; /* <--- 关键：移除链接默认的下划线 */
-        display: block;                  /* 确保 <a> 标签占据整个 <li> 的空间，使其点击区域完整 */
-
-        // 保持卡片悬停和点击时的视觉效果
-        &:hover {
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important; /* 悬停时阴影更明显 */
-            transform: translateY(-2px); /* 轻微上浮效果 */
-        }
-        
-        &:active {
-            transform: translateY(0); /* 点击时恢复原位 */
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
-        }
 
     list-style: none; /* 移除列表默认的点 */
     padding: 0;
