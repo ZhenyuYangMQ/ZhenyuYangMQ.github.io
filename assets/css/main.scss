@@ -149,6 +149,7 @@ img {
     box-shadow: 0 0 2px 2px var(--shadow_color);
     padding-bottom: 2rem;
     padding-right: 30px !important;
+    padding-right: 0 !important;
 
     @include breakpoint(medium) {
         margin-left: auto;
