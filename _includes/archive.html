@@ -31,18 +31,18 @@
             {{ post.authors | escape }}
           </div>
           <div class='archive_title'>
-  {% assign year = post.date | date: '%Y' %}
-  {% assign venue_full = post.venues %}
-  {% assign venue_key = venue_full | split: '(' | first | strip %}
-  {% assign venue_rank = venue_full | split: '(' | last | remove: ')' | strip %}
-  {% assign venue_info = site.data.venues[venue_key] %}
+			{% assign year = post.date | date: '%Y' %}
+			{% assign venue_full = post.venues %}
+			{% assign venue_key = venue_full | split: '(' | first | strip %}
+			{% assign venue_rank = venue_full | split: '(' | last | remove: ')' | strip %}
+			{% assign venue_info = site.data.venues[venue_key] %}
 
-  {% if venue_info %}
-    {{ venue_key }} {{ year }}: {{ venue_info }} ({{ year }})
-  {% else %}
-    {{ venue_full }} {{ year }}
-  {% endif %}
-</div>
+			{% if venue_info %}
+				{{ venue_key }} {{ year }}: {{ venue_info }} ({{ venue_rank }})
+			{% else %}
+				{{ venue_full }} {{ year }}
+			{% endif %}
+		</div>
         </div>
       </li>
     </ul>
