@@ -17,8 +17,9 @@
   {% endunless %}
 
   <ul class="publication-list-category">  
+	<a href="{{ post.link | relative_url }}">
       <li class="publication-item-category">
-	  <a href="{{ post.link | relative_url }}">
+
           <div class="publication-image-wrapper"> 
             <img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }} thumbnail">
           </div>
@@ -45,8 +46,8 @@
 			{% endif %}
 		</div>
         </div>
-		</a>
       </li>
+	  </a>
     </ul>
     {% endif %}
   {% endfor %}
