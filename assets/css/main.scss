@@ -848,6 +848,12 @@ img {
     }
 }
 
+.publication-item-link {
+  color: inherit;            /* 继承父元素颜色 */
+  text-decoration: none;     /* 去掉下划线 */
+  display: block;
+}
+
 /* 确保 .archive_year 的样式是您想要的 */
 .archive_year {
     font-size: 1.2rem;
