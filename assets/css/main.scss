@@ -771,18 +771,15 @@ img {
 .publication-item-category {
     display: flex; /* 启用 Flexbox 布局，使图片和文本并列 */
     align-items: flex-start; /* 顶部对齐：使图片和文本的顶部对齐 */
-    margin-bottom: 2.5rem; /* 每条出版物之间的垂直间距 */
-    padding-bottom: 1.5rem; /* 底部内边距 */
+    /* margin-bottom: 2.5rem;  每条出版物之间的垂直间距 */
+    /* padding-bottom: 1.5rem;  底部内边距 */
     /* border-bottom: 1px dashed var(--job_font); 可以添加虚线分隔线 */
     
-    background-color: #fff; /* 给卡片一个背景色 */
-    border-radius: 8px; /* 轻微圆角，使卡片更柔和 */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.08); /* 轻微的阴影效果 */
-    /* 您可以调整阴影参数：
-       - 0 4px 8px：水平偏移 0，垂直偏移 4px，模糊半径 8px
-       - rgba(0,0,0,0.08)：黑色，透明度 8%
-       尝试更轻的阴影如 rgba(0,0,0,0.05) 或 0 2px 4px
-    */
+    background-color: #fff !important; /* 给卡片一个背景色 */
+    border-radius: 8px !important; /* 轻微圆角，使卡片更柔和 */
+    padding: 1.5rem 2rem
+
+    box-shadow: 0 6px 12px rgba(0,0,0,0.08); /* 轻微的阴影效果 */
 
     @media (max-width: 768px) { /* 针对小屏幕设备的响应式调整 */
         flex-direction: column; /* 在手机上图片和文本垂直堆叠 */
