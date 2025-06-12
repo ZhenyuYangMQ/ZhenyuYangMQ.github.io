@@ -2,7 +2,7 @@
 title: State of the Art and Potentialities of Graph-level Learning
 categories: [Publications]
 comments: true
-authors: Zhenyu Yang*, Ge Zhang, Jia Wu, Jian Yang, Quan Z. Sheng, Shan Xue, Chuan Zhou, Charu Aggarwal, Hao Peng, Wenbin Hu, Edwin Hancock, Pietro Li`o 
+authors: Zhenyu Yang, Ge Zhang, Jia Wu, Jian Yang, Quan Z. Sheng, Shan Xue, Chuan Zhou, Charu Aggarwal, Hao Peng, Wenbin Hu, Edwin Hancock, Pietro Li`o 
 link: https://dl.acm.org/doi/pdf/10.1145/3695863
 venues: CSUR (IF 23.8)
 image: "/assets/pub/Graph-level-survey.png"
