@@ -1,7 +1,7 @@
 ---
 categories: [Awards]
 comments: true
-awards: KDD Travel Grant
-venues: KDD 2025
+awards: KDD 2025 Travel Grant
+venues: KDD
 link: tbd
 ---
